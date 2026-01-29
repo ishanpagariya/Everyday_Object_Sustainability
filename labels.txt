@@ -1,0 +1,4 @@
+0 Highly sustainable
+1 Moderately sustainable
+2 Non sustainable
+3 Compostable
