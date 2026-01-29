@@ -5,7 +5,7 @@ import tensorflow as tf
 from tensorflow import keras
 from google import genai
 
-client = genai.Client(api_key=["GEMINI_API_KEY"])
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 model = keras.models.load_model("keras_model.h5", compile=False)
 
@@ -30,7 +30,7 @@ if image:
 
     st.success(f"This looks like it is: **{predicted_class}**")
 
-    with st.spinner("Thinking hmmmmmmmmm..."):
+    with st.spinner("Thinking..."):
         response = client.models.generate_content(
             model="gemini-3-flash-preview",
             contents=(
