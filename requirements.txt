@@ -1,3 +1,8 @@
 google-genai
+streamlit
+tensorflow
+tf-keras
+pillow
+numpy
 
 
